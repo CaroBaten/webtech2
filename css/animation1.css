@@ -1,0 +1,63 @@
+body 
+{
+margin: 20px;
+}
+
+.cirkel
+{
+position: absolute;
+width: 20px;
+height: 20px;
+border-radius: 20px;
+}
+
+.c1 {
+
+background-color: red;
+}
+
+.c2 
+{
+background-color: blue;
+}
+
+.c3 
+{
+background-color: yellow;
+}
+
+.m1 {
+
+-webkit-animation: moveball1 0.5s;
+-webkit-animation-fill-mode: forwards;
+-webkit-transform-origin: left top;	
+}
+
+.m2 
+{
+-webkit-animation: moveball2 0.5s;
+-webkit-animation-fill-mode: forwards;
+-webkit-transform-origin: left top;
+}
+
+.m3 
+{
+-webkit-animation: moveball3 0.5s;
+-webkit-animation-fill-mode: forwards;
+-webkit-transform-origin: left top;
+}
+
+@-webkit-keyframes moveball1
+{
+100% {-webkit-transform: translateX(50px)}
+}
+
+@-webkit-keyframes moveball2
+{
+100% {-webkit-transform: translateX(50px) translateY(50px)}
+}
+
+@-webkit-keyframes moveball3
+{
+100% {-webkit-transform: translateY(50px)}
+}
