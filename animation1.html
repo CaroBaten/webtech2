@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<title>Animation 1</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+<link href="css/animation1.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="cirkel c1"></div>
+<div class="cirkel c2"></div>
+<div class="cirkel c3"></div>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() 
+	{
+		$(".cirkel").click( function() 
+		{
+			$(".c1").addClass("m1");
+			$(".c2").addClass("m2");
+			$(".c3").addClass("m3");
+		});
+	});
+</script>
+</body>
+</html>
