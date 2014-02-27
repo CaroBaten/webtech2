@@ -1,0 +1,94 @@
+body
+{
+	background-color: #3a5265;
+	margin: 20px;
+}
+
+#wrapper
+{
+	width: 700px;
+	margin: 0 auto;
+}
+
+header
+{
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 20px;
+	overflow: hidden;
+	-webkit-animation: flipInX 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform-origin: center center;
+}
+
+header img
+{
+	float: left;
+	max-width: 80px;
+}
+
+.header
+{
+	margin-left: -700px;
+	-webkit-animation: fadeIn 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform-origin: left top;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 20pt;
+	margin-left: 30px;
+	float: left;
+}
+
+nav
+{
+	width: 700px;
+	margin: 50px auto;
+	-webkit-animation: flipInY 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform-origin: left top;
+}
+
+nav img
+{
+	margin: 20px;
+	border-radius: 20px;
+	max-width: 200px;
+	
+}
+
+nav img:hover
+{
+	-webkit-animation: scaleIn 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform-origin: center center;
+}
+
+@-webkit-keyframes flipInY
+{
+	0% {-webkit-transform: rotateY(90deg)}
+	40% {-webkit-transform: rotateY(-10deg)}
+	70% {-webkit-transform: rotateY(10deg)}
+	100% {-webkit-transform: rotateY(0deg)}
+}
+
+@-webkit-keyframes fadeIn
+{
+	100% {-webkit-transform: translateX(700px)}
+}
+
+@-webkit-keyframes flipInX
+{
+	0% {-webkit-transform: rotateX(90deg)}
+	40% {-webkit-transform: rotateX(-10deg)}
+	70% {-webkit-transform: rotateX(10deg)}
+	100% {-webkit-transform: rotateX(0deg)}
+}
+
+@-webkit-keyframes scaleIn
+{
+	100% {-webkit-transform: scale(1.1)}
+}
