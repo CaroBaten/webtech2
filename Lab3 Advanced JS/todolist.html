@@ -8,6 +8,8 @@
 <body>
 	<div class="container">
 		<h1>IMDo App</h1>
+		
+		<input id="whattodo" type="text" placeholder="Please enter your task" required></input>
 
 		<ul>
 			<li id="todo-item1">Learn about GIT</li>
@@ -61,29 +63,16 @@
 					var elements = document.getElementsByClassName(classToSelect);
 					var result = new IMDelement(elements);
 				break;
-				
-				
-				default:
-					//case for any tagname selector like $("li") or $("p")
-					var elements = document.getElementsByTagName(p_element);
-					var result = new IMDelement(elements);
 			}
 
 			return result;
 		}
 
-		var addClass = function()
-		{
-			
-		}
+		
 
 
 		// EIGEN CODE
-		$("li").color("yellow");
-		/*$("li").click(function()
-		{
-			$(this).addClass("done");
-		)}*/
+		$("#todo-item1").color("yellow");
 		
 
 	</script>
