@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Advanced</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<h1>IMDo App</h1>
+
+		<ul>
+			<li id="todo-item1">Learn about GIT</li>
+			<li id="todo-item2" class="todo">Experiment with CSS animations</li>
+			<li id="todo-item3" class="todo">Become a Javascript ninja</li>
+		</ul>
+
+	</div><!-- end container -->
+
+	<script>
+		// FRAMEWORK
+		var IMDelement = function(element)
+		{
+			this.element = element;
+			this.isArray = (element.length > 1) ? true : false;
+		}
+
+		IMDelement.prototype.color = function(p_color)
+		{
+			if(this.isArray)
+			{
+				for(var i=0, l=this.element.length; i<l; i++)
+				{
+					this.element[i].style['color'] = p_color;
+				}
+			}
+			else
+			{
+				this.element.style['color'] = p_color;
+			}
+
+			return this.element;
+			
+		}
+
+		var $ = function(p_element)
+		{
+			var firstCharacter = p_element.charAt(0);
+			var result;
+			
+			switch(firstCharacter)
+			{
+				case "#":
+					var idToSelect = p_element.substring(1, p_element.length);
+					var element = document.getElementById(idToSelect);
+					var result = new IMDelement(element);
+				break;
+
+				case ".":
+					var classToSelect = p_element.substring(1, p_element.length); 
+					var elements = document.getElementsByClassName(classToSelect);
+					var result = new IMDelement(elements);
+				break;
+				
+				
+				default:
+					//case for any tagname selector like $("li") or $("p")
+					var elements = document.getElementsByTagName(p_element);
+					var result = new IMDelement(elements);
+			}
+
+			return result;
+		}
+
+		var addClass = function()
+		{
+			
+		}
+
+
+		// EIGEN CODE
+		$("li").color("yellow");
+		/*$("li").click(function()
+		{
+			$(this).addClass("done");
+		)}*/
+		
+
+	</script>
+
+</body>
+</html>
