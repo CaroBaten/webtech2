@@ -1,81 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Javascript Advanced</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Javascript Advanced</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
+
 <body>
-	<div class="container">
-		<h1>IMDo App</h1>
-		
-		<input id="whattodo" type="text" placeholder="Please enter your task" required></input>
 
-		<ul>
-			<li id="todo-item1">Learn about GIT</li>
-			<li id="todo-item2" class="todo">Experiment with CSS animations</li>
-			<li id="todo-item3" class="todo">Become a Javascript ninja</li>
-		</ul>
+<div id="container">
 
-	</div><!-- end container -->
+    <h1>IMDo App</h1>
+	
+	<div id="textf">
+    <input id="textfield" type="text" placeholder="Please enter your todo" required></input>
+	 
+	 <select id = "plist">
+               <option value="high">High priority</option>
+               <option value="medium">Medium priority</option>
+               <option value="low">Low priority</option>
+    </select>
+	
+    <button type="submit">Add todo</button>
+	</div>
+    <ul>
+    </ul>
 
-	<script>
-		// FRAMEWORK
-		var IMDelement = function(element)
-		{
-			this.element = element;
-			this.isArray = (element.length > 1) ? true : false;
-		}
+</div><!-- end container -->
 
-		IMDelement.prototype.color = function(p_color)
-		{
-			if(this.isArray)
-			{
-				for(var i=0, l=this.element.length; i<l; i++)
-				{
-					this.element[i].style['color'] = p_color;
-				}
-			}
-			else
-			{
-				this.element.style['color'] = p_color;
-			}
-
-			return this.element;
-			
-		}
-
-		var $ = function(p_element)
-		{
-			var firstCharacter = p_element.charAt(0);
-			var result;
-			
-			switch(firstCharacter)
-			{
-				case "#":
-					var idToSelect = p_element.substring(1, p_element.length);
-					var element = document.getElementById(idToSelect);
-					var result = new IMDelement(element);
-				break;
-
-				case ".":
-					var classToSelect = p_element.substring(1, p_element.length); 
-					var elements = document.getElementsByClassName(classToSelect);
-					var result = new IMDelement(elements);
-				break;
-			}
-
-			return result;
-		}
-
-		
-
-
-		// EIGEN CODE
-		$("#todo-item1").color("yellow");
-		
-
-	</script>
+<script src="js/framework.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
