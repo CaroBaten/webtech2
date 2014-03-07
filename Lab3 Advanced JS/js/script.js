@@ -91,7 +91,7 @@ IMDelement.prototype.click = function(callback)
 	}
 }
 
-        $('.prior-high').addClass('done');
+        $('.prior-low').addClass('done');
         //$('#todo-item1').addClass('done');
         //$('li').addClass('done');
         /*$('li').click(function(){
