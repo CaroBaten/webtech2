@@ -1,46 +1,99 @@
-var $= function(p_element) 
+var IMDelement = function(element)
 {
-
-    var firstCharacter = p_element.charAt(0);
-    var result;
-
-        switch (firstCharacter)
-            {
-                case "#":
-                    var idToSelect=p_element.substr(1,p_element.length-1);
-                    var element = document.getElementById(idToSelect);
-                    var result=new IMDElement(element);
-                break;
-
-                case ".":
-                    var classToSelect=p_element.substr(1,p_element.length-1);
-                    var elements= document.getElementsByClassName(classToSelect);
-                    var result= new IMDElement(elements);
-                break;
-
-                default:
-                    var elements= document.getElementsByTagName(p_element);
-                    var result= new IMDElement(elements)
-                break;
-            }
-        return result;
+	this.element = element;
+	this.isArray = (element.length > 1) ? true : false;
 }
 
-$("button").click(function(){
+IMDelement.prototype.color = function(p_color)
+{
+	if(this.isArray)	
+	{
+		for(var i=0, l=this.element.length; i<l; i++)
+		{
+			this.element[i].style['color'] = p_color;
+		}
+	}
+	else
+	{
+		this.element[0].style['color'] = p_color;
+	}
+	return this.element;
+}
 
-    //Framework does not have support for drop-down list
-    var e = document.getElementById("plist"); // Return the object ddl without putting it into the framework
-    var strUser = e.options[e.selectedIndex].value; // Return the selected value
+IMDelement.prototype.addClass = function(p_className)
+{
+	if(this.isArray)
+	{
+		for(var i=0, l=this.element.length; i<l; i++)
+		{
+			this.element[i].className = this.element[i].className + " " + p_className;
+		}
+	}
+	else
+	{
+		this.element[0].className = this.element[0].className + " " + p_className;
+	}
+}
 
-    if($("#textfield").value()) {
+var $ = function(p_element)
+{
+	var selectedItem;
+	var element;
+	var result;
 
-        $("ul").addTodo($("#textfield").value(), strUser).click(
+	if(typeof p_element == "object")
+	{
+		element = [p_element];
+	}
+	else
+	{
+		var firstCharacter = p_element.charAt(0);
 
-                        function(){new IMDElement(this).addClass("done");}
-            );}
-    });
+	if(firstCharacter == "#")
+	{
+		selectedItem = p_element.substring(1, p_element.length);
+		element = [document.getElementById(selectedItem)];
+	}
+	else if(firstCharacter == ".")
+	{
+		selectedItem = p_element.substring(1, p_element.length);
+		element = document.getElementsByClassName(selectedItem);
+	}
+	else
+	{
+		selectedItem = p_element;
+		element = document.getElementsByTagName(selectedItem);
+	}
+}
+	result = new IMDelement(element);
+	return result;
+}
 
-$("ul").addTodo("Learn about GIT","high").click(function(){new IMDElement(this).addClass("done");});
-$("ul").addTodo("Learn about Prototypes","high").click(function(){new IMDElement(this).addClass("done");});
-$("ul").addTodo("Experiment with CSS animations","medium").click(function(){new IMDElement(this).addClass("done");});
-$("ul").addTodo("Become a Javascript ninja","low").click(function(){new IMDElement(this).addClass("done");});
+IMDelement.prototype.click = function(callback)
+{
+	if(this.isArray)
+	{
+		for(var i=0, l=this.element.length; i<l; i++)
+		{
+			this.element[i].addEventListener('click', function(e)
+			{
+				callback.apply(this);
+				return callback;
+			});
+		}
+	}
+	else
+	{
+		this.element[0].addEventListener('click', function(e)
+		{
+			return callback(e);
+		});
+	}
+}
+
+        $('.prior-high').addClass('done');
+        //$('#todo-item1').addClass('done');
+        //$('li').addClass('done');
+        /*$('li').click(function(){
+		$(this).addClass('done');
+		});*/

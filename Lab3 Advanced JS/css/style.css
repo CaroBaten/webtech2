@@ -1,59 +1,67 @@
 body
 {
-	background-color: #000;
+    background-color: #000;
+    color: #fff;
 	font-family: helvetica;
+	font-weight: bold;
 }
 
 #container
 {
-	width: 800px;
+   	width: 800px;
     margin: 20px auto;
-}
-
-#textfield
-{
-	background-color: #adadad;
-	width: 500px;
-}
-
-.priority-high 
-{
-    background-color: #f70819;
-}
-.priority-medium 
-{
-    background-color: #ff4619;
-}
-.priority-low 
-{
-    background-color: #f77319;
-}
-
-::-webkit-input-placeholder {
-    color: #fff;
-}
-
-li
-{
-	color: #fff;
-    font-weight: bold;
-    padding: 20px;
-}
-
-#textf
-{
-	background-color: #292929;
 }
 
 h1
 {
-	color: #fff;
-	font-size: 26pt;
-	font-weight: bold;
-	padding-bottom: 10px;
+	font-size: 26px;
+	padding-bottom: 15px;
 }
 
-.done 
+#todo-list
 {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li
+{
+    padding: 10px;
+}
+
+#todo-add-item
+{
+    background-color: #2a2a2a;
+}
+
+#add-item-text
+{
+    background-color: #a1a1a1;
+	display: block;
+    border: none;
+   	padding: 5px 5px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.prior-high
+{
+background-color: #f70819;
+}
+
+.prior-medium
+{
+background-color: #ff4619;
+}
+
+.prior-low
+{
+background-color:#f77319;
+}
+
+.done
+{
+    background-color: #1ab41f;
     text-decoration: line-through;
 }
