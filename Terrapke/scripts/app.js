@@ -168,7 +168,7 @@ function getMotivation(summary)
 		break;
 		
 		case "partly-cloudy-night":
-			$("#motivation").append("Lekker slapen!");
+			$("#motivation").append("Gedeeltelijk bewolkt, maar het is tijd om te slapen!");
 		break;
 		
 		default:
