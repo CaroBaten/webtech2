@@ -156,7 +156,7 @@ function getMotivation(summary)
 		break;
 		
 		case "fog":
-			$("#motivation").append("Kijk uit je doppen, het is mistig!");
+			$("#motivation").append("Kijk goed uit, het is mistig!");
 		break;
 		
 		case "cloudy":
