@@ -41,7 +41,7 @@ $(function()
 		else
 		{
 			var jsonResponse = localStorage.getItem("jsonitem");
-            console.log("Weer is gecached");
+            console.log("Het weer is gecached");
 			var locatieResponse = localStorage.getItem("locatie");
             var nu = new Date();
 			var cachedTijd = new Date(JSON.parse(jsonResponse).currently.time*1000);
@@ -53,7 +53,7 @@ $(function()
 
         if( Seconds_Between_Dates >= 3600)
 		{
-			console.log("Weer update nodig");
+			console.log("Een weer update nodig");
             var nu = new Date().getTime();
             doAjax();
         }
@@ -67,7 +67,7 @@ $(function()
 
     function error()
 	{
-		console.log("Error met het vinden van locatie")
+		console.log("Fout met het vinden van locatie")
     }
 		getLocation();
 
@@ -75,7 +75,7 @@ function doAjax()
 {
     var jqxhr = $.ajax(
 	{
-    url: 'https://api.forecast.io/forecast/bd57f534e65a91f03c3d1f82735e435a/' + huidigePositie.coords.latitude + ',' + huidigePositie.coords.longitude + '?units=auto',
+    url: 'https://api.forecast.io/forecast/4fe319fa5c7634e8b9a1ff5cedbe4036/' + huidigePositie.coords.latitude + ',' + huidigePositie.coords.longitude + '?units=auto',
     type: 'GET',
     global: true,
     dataType: 'jsonp',
