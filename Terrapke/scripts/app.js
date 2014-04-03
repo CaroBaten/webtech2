@@ -172,7 +172,7 @@ function getMotivation(summary)
 		break;
 		
 		default:
-			$("#motivation").append("Tijd om een terrapke te doen!");
+			$("#motivation").append("Het is tijd om een terrapke te doen!");
 		break;
 	}
 }
