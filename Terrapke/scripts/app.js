@@ -152,7 +152,7 @@ function getMotivation(summary)
 		break;
 		
 		case "wind":
-			$("#motivation").append("Er waait een frisse wind, doe een trui of een jas aan.");
+			$("#motivation").append("Er waait een frisse wind, doe best een trui of een jas aan.");
 		break;
 		
 		case "fog":
