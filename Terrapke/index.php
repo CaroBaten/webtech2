@@ -25,8 +25,9 @@ else
         <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css"> !-->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-                <link rel="stylesheet" href="style.css">
-                <link rel="stylesheet" href="scripts/nprogress.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="scripts/nprogress.css">
+		
     </head>
     <body>
         <div class="row">
