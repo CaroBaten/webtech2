@@ -144,7 +144,7 @@ function getMotivation(summary)
 		break;
 		
 		case "snow":
-			$("#motivation").append("Lekker rollebollen in de sneeuw!");
+			$("#motivation").append("Dolle pret in de sneeuw!");
 		break;
 		
 		case "sleet":
