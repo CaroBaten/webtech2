@@ -6,14 +6,12 @@ if (isset($_POST["mail"]) && !empty($_POST["mail"]))
     $f = fopen('mails.txt', 'a');
     fwrite($f, $_POST["mail"] . "\r\n");
     fclose($f);
-
 }
+
 else
 {
 
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>
