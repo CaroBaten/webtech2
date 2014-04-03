@@ -13,6 +13,7 @@ IMDelement.prototype.color = function(p_color)
 			this.element[i].style['color'] = p_color;
 		}
 	}
+	
 	else
 	{
 		this.element[0].style['color'] = p_color;
@@ -29,6 +30,7 @@ IMDelement.prototype.addClass = function(p_className)
 			this.element[i].className = this.element[i].className + " " + p_className;
 		}
 	}
+	
 	else
 	{
 		this.element[0].className = this.element[0].className + " " + p_className;
@@ -45,6 +47,7 @@ var $ = function(p_element)
 	{
 		element = [p_element];
 	}
+	
 	else
 	{
 		var firstCharacter = p_element.charAt(0);
@@ -54,11 +57,13 @@ var $ = function(p_element)
 		selectedItem = p_element.substring(1, p_element.length);
 		element = [document.getElementById(selectedItem)];
 	}
+	
 	else if(firstCharacter == ".")
 	{
 		selectedItem = p_element.substring(1, p_element.length);
 		element = document.getElementsByClassName(selectedItem);
 	}
+	
 	else
 	{
 		selectedItem = p_element;
