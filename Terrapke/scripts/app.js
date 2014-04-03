@@ -132,7 +132,7 @@ function getMotivation(summary)
 	switch(summary)
 	{
 		case "clear-day":
-			$("#motivation").append('Mooi weer, het is tijd om een terrapke te doen!');
+			$("#motivation").append('Mooi weer vandaag, het is tijd om een terrapke te doen!');
 		break;
 		
 		case "clear-night":
