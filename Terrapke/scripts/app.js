@@ -160,7 +160,7 @@ function getMotivation(summary)
 		break;
 		
 		case "cloudy":
-			$("#motivation").append("Wolken in zicht, neem een trui of een jas mee.");
+			$("#motivation").append("Bewolkt vandaag, neem een trui of een jas mee.");
 		break;
 		
 		case "partly-cloudy-day":
