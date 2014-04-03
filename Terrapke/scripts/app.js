@@ -140,7 +140,7 @@ function getMotivation(summary)
 		break;
 		
 		case "rain":
-			$("#motivation").append("Na regen komt zonneschijn!");
+			$("#motivation").append("Na regen komt zonneschijn! Een paraplu kan nu wel handig zijn!");
 		break;
 		
 		case "snow":
