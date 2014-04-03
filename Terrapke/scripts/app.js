@@ -136,7 +136,7 @@ function getMotivation(summary)
 		break;
 		
 		case "clear-night":
-			$("#motivation").append("Tijd om te slapen.");
+			$("#motivation").append("Het is tijd om te slapen.");
 		break;
 		
 		case "rain":
