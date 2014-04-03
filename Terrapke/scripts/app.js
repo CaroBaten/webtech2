@@ -164,7 +164,7 @@ function getMotivation(summary)
 		break;
 		
 		case "partly-cloudy-day":
-			$("#motivation").append('Een beetje wolken houdt ons niet tegen om een terrapke te doen!');
+			$("#motivation").append('Een beetje bewolking houdt ons niet tegen om een terrapke te doen!');
 		break;
 		
 		case "partly-cloudy-night":
