@@ -148,7 +148,7 @@ function getMotivation(summary)
 		break;
 		
 		case "sleet":
-			$("#motivation").append('Pas op voor slippertjes!');
+			$("#motivation").append('Opgepast voor slippertjes! Het is glad!');
 		break;
 		
 		case "wind":
